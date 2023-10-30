@@ -55,11 +55,12 @@ DJANGO_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.postgres",
+    'rest_framework',
 ]
 
 LOCAL_APPS = [
     "apps.base",
-    "apps.users",
+    "apps.contacts",
 ]
 
 THIRD_PARTY_APPS = []

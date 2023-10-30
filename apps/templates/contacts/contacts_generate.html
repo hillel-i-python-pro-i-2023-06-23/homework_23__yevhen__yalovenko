@@ -1,7 +1,7 @@
 {% extends "_helpers/_base.html" %}
 
 {% block content %}
-    <h1>Users generating</h1>
+    <h1>Contacts generating</h1>
 
     <form method="POST" style="margin-bottom: 1em;">
         {% csrf_token %}
@@ -9,7 +9,9 @@
         {{ form.as_p }}
 
         <button type="submit">Generate</button>
-    </form>
 
-    {% include "users/_users_list_base.html" with users_list=users_list %}
+    </form>
+        <a href="{% url 'base:home_page' %}">
+            <button>Back</button>
+        </a>
 {% endblock %}

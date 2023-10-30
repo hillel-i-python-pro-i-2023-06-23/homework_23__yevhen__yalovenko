@@ -8,7 +8,18 @@
 
 {% block content %}
     <div style="color: black">
-    <p>{{ greeting_text }}</p>
+        <p>{{ greeting_text }}</p>
+        {% if not user.is_superuser %}
+            <a href="{% url 'admin:index' %}"> Please login if you admin </a>
+        {% endif %}
+        {% if user.is_superuser %}
+            <a href="{% url 'contacts:contacts_generate' %}">
+                <button> Generate users</button>
+            </a>
+            <a href="{% url 'contacts:contacts_delete' %}">
+                <button> Delete all users</button>
+            </a>
+        {% endif %}
     </div>
 {% endblock %}
 

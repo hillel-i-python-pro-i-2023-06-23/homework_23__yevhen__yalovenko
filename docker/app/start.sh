@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # [bash_init]-[BEGIN]
 # Exit whenever it encounters an error, also known as a non–zero exit code.
 set -o errexit
